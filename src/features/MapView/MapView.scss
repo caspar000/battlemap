@@ -1,0 +1,129 @@
+.left-tools {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: #444;
+  text-align: center;
+  max-width: 60px;
+  position: fixed;
+  margin: 0;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.top-tools {
+  box-sizing: border-box;
+  width: 100%;
+  background: #333;
+  height: 40px;
+  p {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0;
+    color: white;
+  }
+}
+.top-tools-button {
+  background: #333;
+  border: none;
+  display: inline;
+  max-width: 46px;
+}
+
+.right-tools {
+  position: fixed;
+  padding: 0;
+  width: 0rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #444;
+  color: white;
+  z-index: 10;
+  transition: 0.4s;
+}
+.right-tools-display {
+  width: 10rem;
+  padding: 0 15px;
+}
+
+
+img {
+  width: 100%;
+  max-width: 35px;
+  height: auto;
+}
+
+button, .spawn-entity {
+  box-sizing: border-box;
+  border: 2px outset;
+  border-color: #555 #888;
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: 0;
+  background: #444;
+  outline: none;
+  &:hover{
+    background: #660000;
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &:active{
+    border-style: inset;
+  }
+}
+
+label {
+  max-width: 50px;
+  text-align: center;
+  text-align: center;
+}
+input {
+  max-width: 50px;
+  text-align: center;
+  text-align: center;
+  max-width: 42px;
+  min-height: 35px;
+  border: none;
+  padding: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color {
+  border: none;
+  padding: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 6px solid #660000;
+  position: absolute;
+  top: -2px;
+  left: 107%;
+  opacity: 0;
+  transition: opacity .2s;
+  // &::after {
+  //   content: " ";
+  //   position: absolute;
+  //   top: 10px;
+  //   right: 100%; /* To the left of the tooltip */
+  //   margin-top: -5px;
+  //   border-width: 5px;
+  //   border-style: solid;
+  //   border-color: transparent #444 transparent transparent;
+  // }
+}
